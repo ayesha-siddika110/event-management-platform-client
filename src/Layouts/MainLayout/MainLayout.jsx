@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from "react-router";
 import Navbar from "../../componants/Navbar/Navbar";
+import { Toaster } from "react-hot-toast";
 
 
 const MainLayout = () => {
@@ -8,6 +9,7 @@ const MainLayout = () => {
 
     return (
         <div>
+            <Toaster />
             {!path && <Navbar></Navbar>}
             <Outlet></Outlet>
             

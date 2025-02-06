@@ -1,14 +1,16 @@
 import { Link } from "react-router";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import useAuth from "../../Hooks/useAuth";
 
 
 const Navbar = () => {
+    const {user} = useAuth()
 
     const links = <>
     <Link to={"/"}>Home</Link>
     <Link to={"/about"}>About</Link>
-    
     </>
+    
     return (
         <div className="bg-slate-100 sticky top-0">
             <div className="navbar w-[90%] m-auto">
@@ -34,7 +36,7 @@ const Navbar = () => {
                            {links}
                         </ul>
                     </div>
-                    <a className=" text-3xl py-4 font-semibold uppercase tracking-[2px]">Event <span className="uppercase text-indigo-600 tracking-[5px]">Managment</span></a>
+                    <a className=" text-3xl py-4 font-semibold uppercase tracking-[2px]">Event <span className="uppercase text-indigo-600 tracking-[5px]">Manage</span></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-3 text-base">
