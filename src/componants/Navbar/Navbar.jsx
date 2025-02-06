@@ -34,7 +34,7 @@ const Navbar = () => {
                            {links}
                         </ul>
                     </div>
-                    <a className=" text-xl font-semibold uppercase tracking-[2px]">Event <span className="uppercase text-indigo-600 tracking-[5px]">Managment</span></a>
+                    <a className=" text-3xl py-4 font-semibold uppercase tracking-[2px]">Event <span className="uppercase text-indigo-600 tracking-[5px]">Managment</span></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-3 text-base">
@@ -42,7 +42,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <PrimaryButton text={"Login"}></PrimaryButton>
+                    <Link to="/login"><PrimaryButton text={"Login"}></PrimaryButton></Link>
                 </div>
             </div>
 

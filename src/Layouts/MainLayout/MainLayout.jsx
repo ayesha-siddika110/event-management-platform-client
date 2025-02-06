@@ -1,11 +1,14 @@
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import Navbar from "../../componants/Navbar/Navbar";
 
 
 const MainLayout = () => {
+    const location = useLocation()
+    const path = location.pathname === "/login" || location.pathname === "/register"
+
     return (
         <div>
-            <Navbar></Navbar>
+            {!path && <Navbar></Navbar>}
             <Outlet></Outlet>
             
         </div>
